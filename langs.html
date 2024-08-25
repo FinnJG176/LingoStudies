@@ -24,6 +24,46 @@
     /* #construction-img{
         display: inline-block;
     } */
+    .dropbtn {
+    background-color: mediumspringgreen;
+    color: midnightblue;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    }
+
+
+    .dropdown {
+    position: relative;
+    display: inline-block;
+    }
+
+
+    .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: royalblue;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {background-color: rgb(205, 112, 112);}
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {display: block;}
+
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .dropbtn {background-color: lemonchiffon;}
 </style>    
 <!-- contains all the meta information about the document, meta info is not display but is important for how the doc is interpreted by the browser -->
 <head>
@@ -34,9 +74,20 @@
 <!-- contains all the content of the web page, everything in here is displayed -->
 <body>
 
-    <h1 style="color:lightsalmon;font-family:consolas">LingoStudies: Languages</h1>
+    <h1 style="color:mintcream;font-family:consolas">LingoStudies: Languages</h1>
     <p style="color:rgb(72, 89, 174)">Made by Finnegan Granholm and Jialin Zhuo</p>
-    <a href="index.html">Home</a>
+    <div class="dropdown">
+        <button class="dropbtn">Menu</button>
+        <div class="dropdown-content">
+          <a href="#">German</a>
+          <a href="#">Spanish</a>
+          <a href="#">Lingo+</a>
+          <a href="info.html">Information</a>
+          <a href="orglogin.html">Organization Login</a>
+          <a href="index.html">Home</a>
+        </div>
+    </div>
+    <!-- <a href="index.html">Home</a>
     <a href="orglogin.html">Organization Login</a>
     
 
@@ -49,7 +100,7 @@
         
         <div class="box">Lingo+  </div> 
         <img id="construction-img" src="construction-sign-label_24886-506.jpg.avif" width="150" height="150"> 
-    </div>    
+    </div>     -->
 
 </body>
 

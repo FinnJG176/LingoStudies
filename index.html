@@ -4,32 +4,72 @@
 <!-- root element of the html document, lang attribute specifies the language of the doc content  -->
 <html lang="en">
 <style>
-    /* selector { property: value; } */
-    body {
-        background-color: lightgoldenrodyellow;
-        font-family: Arial, sans-serif;
-        margin: 20;
-        padding: 0;
+
+    .dropbtn {
+    background-color: maroon;
+    color: lavenderblush;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
     }
-    .box{
-        width:100px;
-        height:100px;
-        border:1px solid black;
-        padding: 20px;
-        margin: 20px;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        float: left;
+
+
+    .dropdown {
+    position: relative;
+    display: inline-block;
     }
-    .container {
-        display: flex;
-        align-items: center;
-        margin: 20px;
+
+
+    .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: peru;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
     }
-    /* #construction-img{
-        display: inline-block;
-    } */
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {background-color: rgb(205, 112, 112);}
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {display: block;}
+
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .dropbtn {background-color: cadetblue;}
+        body {
+            background-color: lightgoldenrodyellow;
+            font-family: Arial, sans-serif;
+            margin: 20;
+            padding: 0;
+        }
+        .box{
+            width:100px;
+            height:100px;
+            border:1px solid black;
+            padding: 20px;
+            margin: 20px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            float: left;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            margin: 20px;
+        }
+        /* #construction-img{
+            display: inline-block;
+        } */
 </style>    
 <!-- contains all the meta information about the document, meta info is not display but is important for how the doc is interpreted by the browser -->
 <head>
@@ -43,12 +83,15 @@
     <h1 style="color:slateblue;font-family:consolas">LingoStudies</h1>
     <p style="color:sienna">Lingo+ to be available</p>
     <p style="color:rgb(72, 89, 174)">Made by Finnegan Granholm and Jialin Zhuo</p>
-    <ul>
-        <li><a href="langs.html">Languages</li> 
-        <li><a href="orglogin.html">Organization Login</li> 
-        <li><a href="info.html">Information</li> 
-    </ul>
 
+    <div class="dropdown">
+        <button class="dropbtn">Menu</button>
+        <div class="dropdown-content">
+          <a href="langs.html">Languages</a>
+          <a href="orglogin.html">Organization Login</a>
+          <a href="info.html">Information</a>
+        </div>
+    </div>
     <!-- <div class="box">German</div>
     <div class="box">Spanish</div>
     <div class="box">Login</div>
