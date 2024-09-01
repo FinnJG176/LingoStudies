@@ -1,4 +1,44 @@
 <style>
+    .dropbtn {
+    background-color: bisque;
+    color: fuchsia;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    }
+
+
+    .dropdown {
+    position: relative;
+    display: inline-block;
+    }
+
+
+    .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: olive;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {background-color: rgb(169, 99, 24);}
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {display: block;}
+
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .dropbtn {background-color: thistle;}
     body {
         background-color: tomato;
         font-family: Arial, sans-serif;
@@ -36,3 +76,11 @@
     <p>LingoStudies is dedicated to your learning experience. We don't use any cookies. Not to mention, we are free!</p>
     <h2 style="color:powderblue; font-family:'Calibri';">No Virus Policy</h2>
     <p>We are a completely virus-free website. If you find a virus on your computer after using LingoStudies, it's on us! If we find a virus, you will only see a site saying that a virus has been found and we are working on fixing it if you try to open LingoStudies. We promise that if a virus is found, then LingoStudies will be shut down for less than 18 hours while we debug the virus.</p>
+    <div class="dropdown">
+        <button class="dropbtn">Menu</button>
+        <div class="dropdown-content">
+          <a href="langs.html">Languages</a>
+          <a href="orglogin.html">Organization Login</a>
+          <a href="index.html">Home</a>
+        </div>
+    </div>
